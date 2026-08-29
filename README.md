@@ -1,6 +1,6 @@
-# InsurehubTmp
+# InsureHub
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.35.
+Plataforma interna de gestión de seguros (clientes, pólizas, siniestros), construida con [Angular CLI](https://github.com/angular/angular-cli) 20.3.35. Para un repaso de las features de Angular usadas en el proyecto, mira [`GUIA-ANGULAR-ENTREVISTA.md`](./GUIA-ANGULAR-ENTREVISTA.md).
 
 ## Development server
 

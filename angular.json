@@ -2,11 +2,12 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "a91a924d-fb56-48fd-9d16-39e67b921fa9"
   },
   "newProjectRoot": "projects",
   "projects": {
-    "insurehub-tmp": {
+    "insurehub": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -33,7 +34,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ]
           },
           "configurations": {
@@ -64,10 +65,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "insurehub-tmp:build:production"
+              "buildTarget": "insurehub:build:production"
             },
             "development": {
-              "buildTarget": "insurehub-tmp:build:development"
+              "buildTarget": "insurehub:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -91,7 +92,7 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ]
           }
         }
