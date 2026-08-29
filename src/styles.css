@@ -97,7 +97,7 @@
    * the actual containing block instead of the host's own shrink-to-fit
    * width.
    */
-  app-root, app-shell, app-header, app-sidebar,
+  app-root, app-shell, app-header,
   app-dashboard, app-login, app-forgot-password, app-profile, app-settings,
   app-not-found, app-unauthorized,
   app-customers-list, app-customer-detail, app-customer-form,
@@ -109,8 +109,17 @@
     display: block;
   }
 
+  /*
+   * app-sidebar's root uses h-full, which needs a real ancestor chain with
+   * a definite height to resolve against (its parent is stretched by
+   * flexbox, not given an explicit height). `block` gives the sidebar its
+   * own auto-height box, breaking that chain — the aside then collapses to
+   * its content height instead of filling the screen. `contents` removes
+   * that extra box so the inner <aside class="h-full"> sits directly
+   * inside the already-stretched flex parent, same as ui-button etc. below.
+   */
   ui-avatar, ui-badge, ui-button, ui-breadcrumb, ui-dropdown-menu,
-  ui-filter-icon, ui-sort-icon {
+  ui-filter-icon, ui-sort-icon, app-sidebar {
     display: contents;
   }
 
