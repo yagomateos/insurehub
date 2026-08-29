@@ -41,10 +41,10 @@ interface ToggleSetting {
                 role="switch"
                 [attr.aria-checked]="setting.enabled"
                 (click)="toggle(notifications, setting.key)"
-                class="focus-ring relative h-6 w-11 shrink-0 rounded-full transition-colors"
+                class="focus-ring inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors"
                 [class]="setting.enabled ? 'bg-brand-600' : 'bg-ink-200'"
               >
-                <span class="absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform" [class]="setting.enabled ? 'translate-x-5' : 'translate-x-0.5'"></span>
+                <span class="inline-block h-5 w-5 rounded-full bg-white shadow transition-transform" [class]="setting.enabled ? 'translate-x-5' : 'translate-x-0.5'"></span>
               </button>
             </li>
           }
@@ -70,10 +70,10 @@ interface ToggleSetting {
                 role="switch"
                 [attr.aria-checked]="setting.enabled"
                 (click)="toggle(security, setting.key)"
-                class="focus-ring relative h-6 w-11 shrink-0 rounded-full transition-colors"
+                class="focus-ring inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors"
                 [class]="setting.enabled ? 'bg-brand-600' : 'bg-ink-200'"
               >
-                <span class="absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform" [class]="setting.enabled ? 'translate-x-5' : 'translate-x-0.5'"></span>
+                <span class="inline-block h-5 w-5 rounded-full bg-white shadow transition-transform" [class]="setting.enabled ? 'translate-x-5' : 'translate-x-0.5'"></span>
               </button>
             </li>
           }
@@ -102,10 +102,10 @@ interface ToggleSetting {
                 role="switch"
                 [attr.aria-checked]="setting.enabled"
                 (click)="toggle(preferences, setting.key)"
-                class="focus-ring relative h-6 w-11 shrink-0 rounded-full transition-colors"
+                class="focus-ring inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors"
                 [class]="setting.enabled ? 'bg-brand-600' : 'bg-ink-200'"
               >
-                <span class="absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform" [class]="setting.enabled ? 'translate-x-5' : 'translate-x-0.5'"></span>
+                <span class="inline-block h-5 w-5 rounded-full bg-white shadow transition-transform" [class]="setting.enabled ? 'translate-x-5' : 'translate-x-0.5'"></span>
               </button>
             </li>
           }
