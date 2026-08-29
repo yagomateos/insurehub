@@ -84,6 +84,36 @@
     background-color: var(--color-brand-200);
   }
 
+  /*
+   * Angular components have no default display value, so the browser treats
+   * them as unknown inline elements. That silently breaks margin-based
+   * spacing utilities (space-y-*, mt-*, mb-*) between them — the classic
+   * symptom being two block-level-looking components rendering flush
+   * against each other with no gap. Layout/container components get
+   * `block`. Small presentational ones (badge, button, icons...) get
+   * `contents` so the host generates no box of its own — their inner
+   * element behaves as if it were placed directly in the real parent,
+   * which matters for things like a button's `w-full` resolving against
+   * the actual containing block instead of the host's own shrink-to-fit
+   * width.
+   */
+  app-root, app-shell, app-header, app-sidebar,
+  app-dashboard, app-login, app-forgot-password, app-profile, app-settings,
+  app-not-found, app-unauthorized,
+  app-customers-list, app-customer-detail, app-customer-form,
+  app-policies-list, app-policy-form,
+  app-claims-list, app-claim-detail, app-claim-form,
+  ui-card, ui-modal, ui-tabs, ui-empty-state, ui-error-state,
+  ui-pagination, ui-toast-container, ui-line-chart, ui-donut-chart,
+  ui-stat-card, ui-form-field, ui-skeleton {
+    display: block;
+  }
+
+  ui-avatar, ui-badge, ui-button, ui-breadcrumb, ui-dropdown-menu,
+  ui-filter-icon, ui-sort-icon {
+    display: contents;
+  }
+
   /* Scrollbars: slim, corporate */
   ::-webkit-scrollbar {
     width: 8px;
